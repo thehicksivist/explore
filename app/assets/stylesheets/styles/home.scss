@@ -1,47 +1,51 @@
+@import "base/mixins.scss";
 
 body {
     background-image: url(/mnt/004EE4014EE3ED7A/Users/James/projects/explore/app/assets/images/peaks.jpg);
     background-size: cover;
+    background-color: gray;
     /* background-attachment: fixed; */
     font-family: 'Roboto',
         sans-serif;
+    display: grid;
+    grid-template-areas: "header"
+                       "main"
+                       "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(3);
+    // justify-content: space-evenly;
+    // align-content: space-evenly;
 }
 
-/* container for flex displaying main sections */
-main {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-/* main section flexboxes */
 header {
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    margin: 20px;
+    display: grid;
+    justify-content: space-evenly;
+    margin: 10px;
 }
 
-.main {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff60;
-    padding: 10px;
-    margin: 20px;
-    text-align: left;
-    overflow: hidden;
+main {
+    display: grid;
+    justify-content: space-evenly;
+    margin: 10px;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    display: grid;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+/* main section flexboxes */
+
+
+.main {
+    position: relative;
+    max-width: 900px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #ffffff60;  
+    text-align: left;
+    overflow: hidden;
 }
 
 /* content and overlay divs for main flexboxes */
@@ -169,7 +173,7 @@ p {
 
 /* Mobile styles */
 @media screen and (max-width: 414px) {
-    main {
+    .center {
         width: 95%;
     }
 
@@ -208,7 +212,7 @@ p {
 
 /* TABLET STYLES */
 @media screen and (min-width: 415px) and (max-width: 960px) {
-    main {
+    .center {
         width: 85%;
     }
 
@@ -247,9 +251,9 @@ p {
 
 /* desktop styles */
 @media screen and (min-width: 961px) {
-    main {
+    .center {
         width: 70%;
-        font-size: 1.5rem;
+        font-size: 3vh;
     }
 
     /* image sizes set to scale */
@@ -284,4 +288,98 @@ p {
         filter: grayscale(0%);
     }
 
+}
+
+// BELOW IS FOR THE HEADER CARD
+
+
+@mixin transition($time){
+  transition: $time;
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -o-transition: $time;
+}
+
+@mixin transform-style($style){
+   transform-style: $style;
+  -moz-transform-style: $style;
+  -o-transform-style: $style;
+  -ms-transform-style: $style;
+  -webkit-transform-style: $style;
+}
+
+@mixin backface-visibility($visibility: hidden) {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+}
+
+
+@mixin transform($transformation) {
+  transform: $transformation;
+  -webkit-transform: $transformation;
+  -moz-transform: $transformation;
+  -ms-transform: $transformation;
+  -o-transform: $transformation;  
+}
+
+@mixin photo-content {
+  object-fit: cover;
+}
+
+//Add your own mixins here
+
+.notecard {
+  @include transition(0.4s);
+  @include transform-style(preserve-3d);
+  &:hover{
+  @include transform (rotatey(-180deg));  
+}
+  width: 300px;
+  height: 180px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 20px;
+  font-family: Roboto, sans-serif;
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,.2);
+  
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    @include backface-visibility;
+  }
+  
+  .front {
+  z-index: 3;
+  font-size: 20px;
+
+    .word {
+      display: block;
+      text-align: center;
+      position: relative;
+      top: 40%;
+    }    
+  }
+  
+  
+  .back {
+    @include transform(rotatey(-180deg));
+  z-index: 1;
+  word-wrap: break-word;
+  line-height: 1.6;
+    
+    .definition {  
+      width: 100%;
+      height: 100%;
+            
+      .photo {
+        width: 60%;
+        margin: 0px auto;
+          
+      }
+    }
+  }
 }
