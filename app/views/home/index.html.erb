@@ -7,16 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>JAMES HICKS | EXPLORE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../../assets/stylesheets/main.scss" />
 </head>
 
 <body>
-    <!-- main is used as the container to support the header, divs and footer nested containers -->
-    <main>
         <header>
-            <img id="profile" class="noselect" src="src/imgs/profile2.png" alt="James Hicks's Face">
+            <%# <img id="profile" class="noselect" src="src/imgs/profile2.png" alt="James Hicks's Face">
             <h1 class="colour1 noselect">JAMES HICKS</h1>
+            <link rel="stylesheet" type="text/css" href="main.css"> %>
+
+            <div id="notecards">
+            <div class="notecard">
+                <div class="front">
+                <span class="word">Titanosaur</span>
+                </div>
+                <div class="back">
+                <div class="definition">
+                    122 ft, 70 tons, Herbivore, Patagonia about 100 to 95 million years ago
+                    <div class="photo"></div>
+                </div>
+                </div>
+            </div>
+            
+            </div>
         </header>
+         <!-- main is used as the container to support the header, divs and footer nested containers -->
+    <main>
         <div class="main">
             <h3 class="quote">I'm a junior full stack developer whose journey is paved by an <em>explorative</em>
                 nature...</h3>
@@ -78,19 +93,19 @@
             <div class="content">
                 <div class="caption noselect">
                     <img class="icon" src="src/icons/vscode.png" alt="VScode Logo">
-                    VSCode: The Map
+                    The Map
                 </div>
                 <div class="caption noselect">
                     <img class="icon" src="src/icons/git2.png" alt="GitHub Logo1">
-                    GitHub: The Rucksack
+                    The Rucksack
                 </div>
                 <div class="caption noselect">
                     <img class="icon" src="src/icons/evernote.png" alt="Evernote Logo">
-                    Evernote: The Journal
+                    The Journal
                 </div>
                 <div class="caption noselect">
                     <img class="icon" src="src/icons/trello.png" alt="Trello Logo">
-                    Trello: The Compass
+                    The Compass
                 </div>
                 <div class="overlay">
                     <h2 class="noselect">TOOLS OF<br>EXPLORATION</h2>
@@ -123,13 +138,12 @@
                 </div>
             </div>
         </div>
-        <footer class="main">
-            <div>
+    </main>
+
+        <footer>
                 <h3 class="colour3 noselect">{james_and_the_giant_brackets&copy;}<h3>
-            </div>
         </footer>
 
-    </main>
 </body>
 
 </html>
