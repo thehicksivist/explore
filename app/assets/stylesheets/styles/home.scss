@@ -1,0 +1,287 @@
+
+body {
+    background-image: url(/mnt/004EE4014EE3ED7A/Users/James/projects/explore/app/assets/images/peaks.jpg);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    font-family: 'Roboto',
+        sans-serif;
+}
+
+/* container for flex displaying main sections */
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main section flexboxes */
+header {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff60;
+    padding: 10px;
+    margin: 20px;
+    text-align: left;
+    overflow: hidden;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* content and overlay divs for main flexboxes */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.overlay {
+    background-color: white;
+    background-clip: padding-box;
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Image and caption content adjustments */
+img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+}
+
+.caption {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff60;
+}
+
+/* To ensure text will not be selected (it was stopping the transitions and animations from working) */
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* SMALL TWEAKS BELOW */
+/* had to use id for profile image as resizes conflicted with imgs */
+#profile {
+    border-radius: 50%;
+}
+
+#profile,
+.links {
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.quote {
+    float: left;
+    margin: 0 0 1rem;
+    width: 100%;
+}
+
+p {
+    font-family: 'Martel';
+}
+
+/* ANIMATION FOR OVERLAY */
+@keyframes dropdown {
+    0% {
+        background-color: white;
+    }
+
+    40% {
+        background-color: white;
+        opacity: 0;
+        transform: translate(0, 100%)
+    }
+
+    60% {
+        background-color: white;
+        opacity: 0;
+        transform: translate(0, 100%)
+    }
+
+    80% {
+        background-color: white;
+        opacity: 0.2;
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
+.overlay:active {
+    animation: dropdown 5s both;
+}
+
+/* HIDDEN COLOURS */
+.colour1:active {
+    transition: 1s;
+    color: green;
+}
+
+.colour2:active {
+    transition: 1s;
+    color: red;
+}
+
+.colour3:active {
+    transition: 1s;
+    color: blue;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 414px) {
+    main {
+        width: 95%;
+    }
+
+    /* image sizes set to scale */
+    .icon {
+        height: 100px;
+        width: 100px;
+    }
+
+    #profile {
+        height: 150px;
+        width: 150px;
+    }
+
+    /* caption and hold font sizes explicit to ensure layout responds correctly */
+    .caption {
+        font-size: 0.75rem;
+    }
+
+    #hold {
+        font-size: 0.6rem;
+    }
+
+    /* overlay size adjusted to fill */
+    .overlay {
+        width: 95%;
+        height: 95%;
+    }
+
+    /* another hidden colour transition */
+    #profile:active,
+    .links:active {
+        filter: grayscale(0%);
+    }
+}
+
+/* TABLET STYLES */
+@media screen and (min-width: 415px) and (max-width: 960px) {
+    main {
+        width: 85%;
+    }
+
+    /* image sizes set to scale */
+    .icon {
+        height: 100px;
+        width: 100px;
+    }
+
+    #profile {
+        height: 200px;
+        width: 200px;
+    }
+
+    /* caption and hold font sizes explicit to ensure layout responds correctly */
+    .caption {
+        font-size: 1rem;
+    }
+
+    #hold {
+        font-size: 0.75rem;
+    }
+
+    /* overlay size adjusted to fill */
+    .overlay {
+        width: 95%;
+        height: 95%;
+    }
+
+    /* another hidden colour transition */
+    #profile:active,
+    .links:active {
+        filter: grayscale(0%);
+    }
+}
+
+/* desktop styles */
+@media screen and (min-width: 961px) {
+    main {
+        width: 70%;
+        font-size: 1.5rem;
+    }
+
+    /* image sizes set to scale */
+    .icon {
+        height: 200px;
+        width: 200px;
+    }
+
+    #profile {
+        height: 250px;
+        width: 250px;
+    }
+
+    /* caption and hold font sizes explicit to ensure layout responds correctly */
+    .caption {
+        font-size: 1.5rem;
+    }
+
+    #hold {
+        font-size: 1rem;
+    }
+
+    /* overlay size adjusted to fill */
+    .overlay {
+        width: 98%;
+        height: 95%;
+    }
+
+    /* transition triggered by mouseover for desktop */
+    #profile:hover,
+    .links:hover {
+        filter: grayscale(0%);
+    }
+
+}
