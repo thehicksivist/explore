@@ -3,18 +3,13 @@
 body {
     background-image: url(https://res.cloudinary.com/dvqlfwgtf/image/upload/v1542251526/peaks.jpg);
     background-size: cover;
-    // background-color: gray;
-    /* background-attachment: fixed; */
-    font-family: 'Roboto',
-        sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: grid;
     grid-template-areas: "header"
                        "main"
                        "footer";
     grid-template-columns: 1fr;
     grid-template-rows: 1fr repeat(3);
-    // justify-content: space-evenly;
-    // align-content: space-evenly;
 }
 
 header {
@@ -26,7 +21,13 @@ header {
 main {
     display: grid;
     justify-content: space-evenly;
-    margin: 10px;
+    grid-template-areas: "item1 item1"
+                       "item2 item2"
+                       "item3 item4"
+                       "item5 item6";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr repeat(4);
+    margin: 10px auto;
 }
 
 footer {
@@ -41,7 +42,7 @@ footer {
 
 
 .main {
-    position: relative;
+    // position: relative;
     max-width: 900px;
     margin: 10px;
     padding: 10px;
@@ -50,41 +51,58 @@ footer {
     overflow: hidden;
 }
 
+.item3, .item4, .item5, .item6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-evenly;
+}
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item6;
+}
+
+
 /* content and overlay divs for main flexboxes */
 .content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+    @include flex;
 }
 
 .overlay {
     background-color: white;
     background-clip: padding-box;
     position: absolute;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: inherit;
+    height: inherit;
+    @include flex;
+
 }
 
 /* Image and caption content adjustments */
 img {
     object-fit: contain;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     padding: 10px;
     margin: 10px;
-}
-
-.caption {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff60;
 }
 
 /* To ensure text will not be selected (it was stopping the transitions and animations from working) */
@@ -255,7 +273,7 @@ p {
 /* desktop styles */
 @media screen and (min-width: 961px) {
     .center {
-        width: 70%;
+        // width: 70%;
         font-size: 3vh;
     }
 
