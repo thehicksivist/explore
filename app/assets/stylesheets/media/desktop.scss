@@ -1,0 +1,40 @@
+/* desktop styles */
+@media screen and (min-width: 961px) {
+    .center {
+        // width: 70%;
+        font-size: 3vh;
+    }
+
+    /* image sizes set to scale */
+    .icon {
+        height: 200px;
+        width: 200px;
+    }
+
+    #profile {
+        height: 250px;
+        width: 250px;
+    }
+
+    /* caption and hold font sizes explicit to ensure layout responds correctly */
+    .caption {
+        font-size: 1.5rem;
+    }
+
+    #hold {
+        font-size: 1rem;
+    }
+
+    /* overlay size adjusted to fill */
+    // .overlay {
+    //     width: 98%;
+    //     height: 95%;
+    // }
+
+    /* transition triggered by mouseover for desktop */
+    #profile:hover,
+    .links:hover {
+        filter: grayscale(0%);
+    }
+
+}

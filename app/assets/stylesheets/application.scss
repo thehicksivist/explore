@@ -13,10 +13,16 @@
  *= require_tree .
  *= require_self
  */
-
-@import "base/mixins.scss";
-@import "base/normalize.scss";
-@import "base/globals.scss";
-@import "styles/home.scss";
+@import "overlay.scss";
+@import "flipcard.scss";
+@import "media/mobile.scss";
+@import "media/tablet.scss";
+@import "media/desktop.scss";
+@import "tweaks.scss";
+@import "colours.scss";
+@import "mixins.scss";
+@import "grid.scss";
+@import "globals.scss";
+@import "home.scss";
 @import url('https://fonts.googleapis.com/css?family=Marcellus|Martel|Rasa');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
