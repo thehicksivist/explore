@@ -28,13 +28,15 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr repeat(4);
     margin: 10px auto;
+    padding: 10px;
 }
 
 footer {
+    background-color: #ffffff60;  
+    max-width: 900px;
     display: grid;
     justify-content: space-evenly;
-    margin: 10px;
-    background-color: #ffffff60;  
+    margin: 10px auto;
 
 }
 
@@ -42,10 +44,8 @@ footer {
 
 
 .main {
-    // position: relative;
     max-width: 900px;
-    margin: 10px;
-    padding: 10px;
+    margin: 10px auto;
     background-color: #ffffff60;  
     text-align: left;
     overflow: hidden;
@@ -91,9 +91,7 @@ footer {
 .overlay {
     background-color: white;
     background-clip: padding-box;
-    position: absolute;
-    width: inherit;
-    height: inherit;
+  position: absolute;
     @include flex;
 
 }
@@ -258,10 +256,10 @@ p {
     }
 
     /* overlay size adjusted to fill */
-    .overlay {
-        width: 95%;
-        height: 95%;
-    }
+    // .overlay {
+    //     width: 95%;
+    //     height: 95%;
+    // }
 
     /* another hidden colour transition */
     #profile:active,
@@ -298,10 +296,10 @@ p {
     }
 
     /* overlay size adjusted to fill */
-    .overlay {
-        width: 98%;
-        height: 95%;
-    }
+    // .overlay {
+    //     width: 98%;
+    //     height: 95%;
+    // }
 
     /* transition triggered by mouseover for desktop */
     #profile:hover,
