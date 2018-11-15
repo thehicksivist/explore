@@ -1,0 +1,47 @@
+@import "mixins.scss";
+/* SMALL TWEAKS BELOW */
+/* had to use id for profile image as resizes conflicted with imgs */
+#profile {
+    border-radius: 50%;
+}
+
+#profile,
+.links {
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+h1 {
+    @include flex;
+}
+
+.quote {
+    float: left;
+    margin: 0 0 1rem;
+    width: 100%;
+}
+
+p {
+    font-family: 'Martel';
+}
+
+img {
+    object-fit: contain;
+    padding: 10px;
+    margin: 10px;
+}
+
+.o1 {
+    background-image: url('https://res.cloudinary.com/dvqlfwgtf/image/upload/v1542277569/IMG_20150409_004832.jpg');
+    background-size: contain;
+}
+
+.o2 {
+    background-image: url('https://res.cloudinary.com/dvqlfwgtf/image/upload/v1542277554/IMG_20160410_181746.jpg');
+    background-size: contain;
+}
+
+.o3 {
+    background-image: url('https://res.cloudinary.com/dvqlfwgtf/image/upload/v1542277555/IMG_20160211_214628.jpg');
+    background-size: contain;
+}

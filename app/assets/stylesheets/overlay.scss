@@ -1,0 +1,32 @@
+
+/* ANIMATION FOR OVERLAY */
+@keyframes dropdown {
+    0% {
+        background-color: white;
+    }
+
+    40% {
+        background-color: white;
+        opacity: 0;
+        transform: translate(0, 100%)
+    }
+
+    60% {
+        background-color: white;
+        opacity: 0;
+        transform: translate(0, 100%)
+    }
+
+    80% {
+        background-color: white;
+        opacity: 0.2;
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
+.overlay:active {
+    animation: dropdown 5s both;
+}

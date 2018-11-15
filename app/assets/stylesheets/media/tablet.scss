@@ -1,0 +1,39 @@
+
+/* TABLET STYLES */
+@media screen and (min-width: 415px) and (max-width: 960px) {
+    .center {
+        width: 85%;
+    }
+
+    /* image sizes set to scale */
+    .icon {
+        height: 100px;
+        width: 100px;
+    }
+
+    #profile {
+        height: 200px;
+        width: 200px;
+    }
+
+    /* caption and hold font sizes explicit to ensure layout responds correctly */
+    .caption {
+        font-size: 1rem;
+    }
+
+    #hold {
+        font-size: 0.75rem;
+    }
+
+    /* overlay size adjusted to fill */
+    // .overlay {
+    //     width: 95%;
+    //     height: 95%;
+    // }
+
+    /* another hidden colour transition */
+    #profile:active,
+    .links:active {
+        filter: grayscale(0%);
+    }
+}

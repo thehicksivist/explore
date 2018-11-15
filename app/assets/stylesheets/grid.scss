@@ -1,0 +1,44 @@
+
+.main {
+    position: relative;
+    max-width: 900px;
+    margin: 10px;
+    background-color: #ffffff60;  
+    text-align: left;
+    overflow: hidden;
+}
+
+.item1, .item2 {
+    padding: 10px;
+}
+
+.item3, .item4, .item5, .item6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-evenly;
+}
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+}
+
+.item3 {
+    grid-area: item3;
+}
+
+.item4 {
+    grid-area: item4;
+}
+
+.item5 {
+    grid-area: item5;
+}
+
+.item6 {
+    grid-area: item6;
+}
