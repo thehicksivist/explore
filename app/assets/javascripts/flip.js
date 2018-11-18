@@ -1,31 +1,48 @@
 
 window.onload = function() {
+    
     console.log('doc loaded')
-    let card = document.getElementById("cards")
+
+    let profile = document.getElementById("pcards")
+    let past = document.getElementById("past")
+    let current = document.getElementById("current")
+    let tools = document.getElementById("tools")
+
+    profile.addEventListener("click", spin);
+    past.addEventListener("click", drop);
+    current.addEventListener("click", drop);
+    tools.addEventListener("click", drop);
 
     let spun = false;
 
-    card.addEventListener("click", function (event) {
-            if (spun)   {
+    function spin() {
+        if (spun)   {
             this.style.transform = "rotateY(0deg)";
             spun = false;
-            console.log(spun)
-            } else {
+        } 
+        else {
             this.style.transform = "rotateY(180deg)";
             spun = true;
-            console.log(spun)
             }
-        })
+        }
+
+    function drop() {
+        // setTimeout(reset, 10)
+
+        clicked = this
+        console.log(this)
+
+        if (clicked.classList.contains('dropdown')) {
+            clicked.classList.remove('dropdown');
+            console.log("remove")
+            console.log(this)
+        } else {
+        clicked.classList.add('dropdown');
+        console.log("else add")
+        console.log(this)
+        }
+                  
+    }
+
 }
 
-
-
-
-// myButton = document.getElementById("myBtn")
-
-// myButton.addEventListener("click", function(event) {
-//   btn = event.currentTarget
-
-//   btn.style.backgroundColor = 'red'
-//   btn.innerHTML = 'Clicked!'
-// }

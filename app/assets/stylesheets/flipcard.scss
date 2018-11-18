@@ -1,7 +1,7 @@
 @import "mixins.scss";
 // BELOW IS FOR THE HEADER CARD
   
-  .cards {
+  .pcards {
     position: relative;
     @include flex;
     max-width: 900px;
@@ -10,21 +10,22 @@
     transform-style: preserve-3d;
 
   
-    .front, .back {
+    .pfront, .pback {
       position: absolute;
-      // width: 100%;
-      // height: 100%;
       backface-visibility: hidden;
     }
     
-    .front {
+    .pfront {
     z-index: 3;  
     }
     
-    .back {
+    .pback {
       transform: rotatey(-180deg);
       z-index: 1;
      @include flex;
     }
   }
+
+  // BELOW IS FOR THE OVERLAYS
   
+ 
