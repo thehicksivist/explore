@@ -1,6 +1,25 @@
 
 /* Mobile styles */
 @media screen and (max-width: 414px) {
+    main {
+        grid-template-areas: "item1"
+                         "item2"
+                         "item3"
+                         "item4"
+                         "item5"
+                         "item6";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr repeat(6);
+        font-size: 0.7rem;
+    }
+
+    .item3, .item4, .item5, .item6 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: space-evenly;
+    }
+
     .center {
         width: 95%;
     }
@@ -12,23 +31,17 @@
     }
 
     #profile {
-        height: 150px;
-        width: 150px;
+        height: 175px;
+        width: 175px;
+    }
+
+    .cards {
+        height: 200px;
     }
 
     /* caption and hold font sizes explicit to ensure layout responds correctly */
-    .caption {
-        font-size: 0.75rem;
-    }
-
-    #hold {
-        font-size: 0.6rem;
-    }
-
-    /* overlay size adjusted to fill */
-    .overlay {
-        width: 95%;
-        height: 95%;
+    .caption, .content {
+        font-size: 1rem;
     }
 
     /* another hidden colour transition */

@@ -6,17 +6,11 @@
     background-color: #ffffff60;  
     text-align: left;
     overflow: hidden;
+    justify-content: space-evenly;
 }
 
 .item1, .item2 {
     padding: 10px;
-}
-
-.item3, .item4, .item5, .item6 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-content: space-evenly;
 }
 
 .item1 {
@@ -37,8 +31,10 @@
 
 .item5 {
     grid-area: item5;
+    padding-top: 5px;
 }
 
 .item6 {
     grid-area: item6;
+    padding-top: 5px;
 }
