@@ -27,20 +27,24 @@ window.onload = function() {
         }
 
     function drop() {
-        // setTimeout(reset, 10)
+        // setTimeout(reset, 3000)
 
-        clicked = this
-        console.log(this)
+        // clicked = this
+        // console.log(this)
+        this.classList.toggle('dropdown');
+        setTimeout(() => {
+            this.classList.toggle('dropdown');
+        }, 4000)
 
-        if (clicked.classList.contains('dropdown')) {
-            clicked.classList.remove('dropdown');
-            console.log("remove")
-            console.log(this)
-        } else {
-        clicked.classList.add('dropdown');
-        console.log("else add")
-        console.log(this)
-        }
+        // if (clicked.classList.contains('dropdown')) {
+        //     clicked.classList.remove('dropdown');
+        //     console.log("remove")
+        //     console.log(this)
+        // } else {
+        // clicked.classList.add('dropdown');
+        // console.log("else add")
+        // console.log(this)
+        // }
                   
     }
 
