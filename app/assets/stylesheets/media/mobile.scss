@@ -13,7 +13,11 @@
         font-size: 0.7rem;
     }
 
-    .item3, .item4, .item5, .item6 {
+    #item3, #item4 {
+        display: flex;
+    }
+    
+    .item5, .item6 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;

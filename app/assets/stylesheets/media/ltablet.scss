@@ -12,10 +12,9 @@
         font-size: 0.8rem;
     }
 
-    .item3, .item4 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    #item3, #item4 {
+        display: flex;
+        max-width: 440px;
     } 
 
     .item5, .item6 {

@@ -38,6 +38,8 @@ footer {
 .content {
     background-color:#ffffff60;
     @include flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
 }
 
 .overlay {
